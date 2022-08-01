@@ -1,4 +1,6 @@
+
 package com.portfolio.backend.entity;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,15 +11,14 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
-public class EExperiencia {
+public class EEducacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_exp;
+    private Long id_edu;
     
-    private String empresa;
-    private String cargo;
-    private String periodo; 
+    private String nombre_inst;
+    private String titulo;
+    private String fecha; 
     private String enlace;
-    private String descripcion;
-    private String logo_empresa;
+    private String logo_inst;
 }

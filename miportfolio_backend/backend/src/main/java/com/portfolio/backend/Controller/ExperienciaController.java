@@ -25,7 +25,7 @@ public class ExperienciaController {
         return iexperineciaS.verExpe();
     }
     @GetMapping("/experiencia/buscar/{id}")
-    public EExperiencia buscarAcercaDe(@PathVariable Long id){
+    public EExperiencia buscarExpe(@PathVariable Long id){
         return iexperineciaS.buscarExpe(id);
     }
     @PostMapping("/experiencia/crear")
@@ -43,12 +43,14 @@ public class ExperienciaController {
                                      @RequestParam("empresa") String nEmpresa,
                                      @RequestParam("cargo") String nCargo,
                                      @RequestParam("periodo") String nPeriodo,
+                                     @RequestParam("enlace") String nEnlace,
                                      @RequestParam("descripcion") String nDescripcion,
                                      @RequestParam("logo_empresa") String nLogo_perfil){
         EExperiencia expe = iexperineciaS.buscarExpe(id);
         expe.setEmpresa(nEmpresa);
         expe.setCargo(nCargo);
         expe.setPeriodo(nPeriodo);
+        expe.setEnlace(nEnlace);
         expe.setDescripcion(nDescripcion);
         expe.setLogo_empresa(nLogo_perfil);
         iexperineciaS.crearExpe(expe);
