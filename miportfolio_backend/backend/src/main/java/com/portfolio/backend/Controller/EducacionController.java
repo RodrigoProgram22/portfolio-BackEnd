@@ -32,7 +32,7 @@ public class EducacionController {
         iEduS.crearEdu(edu);
         return "Educacion, se creo correctamente.";
     }
-    @DeleteMapping("educacion/borrar/{id}")
+    @DeleteMapping("/educacion/borrar/{id}")
     public String borrarEdu(@PathVariable Long id){
         iEduS.borrarEdu(id);
         return "Educacion, Se elimino correctamente";
