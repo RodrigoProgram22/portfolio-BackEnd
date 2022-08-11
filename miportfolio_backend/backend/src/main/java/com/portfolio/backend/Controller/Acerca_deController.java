@@ -3,6 +3,7 @@ package com.portfolio.backend.Controller;
 import com.portfolio.backend.InterfaceS.IAcerca_deService;
 import com.portfolio.backend.entity.EAcerca_de;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
 @CrossOrigin(origins = "http://localhost:4200")
 public class Acerca_deController {
     @Autowired IAcerca_deService IAcerca_de;
@@ -23,19 +23,19 @@ public class Acerca_deController {
     public EAcerca_de buscarAcercaDe(@PathVariable Long id){
         return IAcerca_de.buscarAcercaDe(id);
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/Acerca_de/crear")
     public String crearAcercaDe(@RequestBody EAcerca_de acerca_de){
         IAcerca_de.crearAcercaDe(acerca_de);  
         return "Acerca_de, se creo correctamente.";
     }
-    
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("Acerca_de/borrar/{id}")
     public String borrarAcercaDe(@PathVariable Long id){
         IAcerca_de.borrarAcercaDe(id);
         return "Acerca_de, Se elimino correctamente";
     }
-    
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/Acerca_de/editar/{id}")
     public EAcerca_de editarAcercaDe(@PathVariable Long id,
                                      @RequestParam("nombre_apellido") String nNombre,

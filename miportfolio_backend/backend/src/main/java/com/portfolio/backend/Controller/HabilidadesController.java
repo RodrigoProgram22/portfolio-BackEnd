@@ -5,6 +5,7 @@ import com.portfolio.backend.InterfaceS.IHabilidadesService;
 import com.portfolio.backend.entity.EHabilidades;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,16 +29,19 @@ public class HabilidadesController {
     public EHabilidades buscarHab(@PathVariable Long id){
         return iHabS.buscarHab(id);
     }
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/habilidades/crear")
     public String crearHab(@RequestBody EHabilidades edu){
         iHabS.crearHab(edu);
         return "Habilidad creada correctamente";
     }
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/habilidades/borrar/{id}")
     public String borrarHab(@PathVariable Long id){
         iHabS.borrarHab(id);
         return "Habilidad borrada correctamente";
     }
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/habilidades/editar/{id}")
     public EHabilidades editHab(@PathVariable Long id,
                                 @RequestParam("nombre") String nNombre,
