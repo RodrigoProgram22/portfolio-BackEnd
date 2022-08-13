@@ -34,7 +34,7 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
         return new JwtTokenFilter();
     }
     @Bean
-    public PasswordEncoder passwordEncoer(){
+    public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     } 
 
@@ -63,6 +63,6 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-       auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoer());
+       auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 }
