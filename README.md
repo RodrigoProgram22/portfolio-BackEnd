@@ -1,4 +1,4 @@
-## Bienvenido al repositorio de mi Portfolio
+## Bienvenido al repositorio de mi Portfolio.
 
 ### **Descripción:**
 
@@ -19,23 +19,18 @@ Si quieres ver el FrontEnd puedes hacer click [Aquí.](https://github.com/Rodrig
 
 ### **Uso:**
 
-La principal idea de esta aplicacion es recibir las peticiones del FrontEnd, para luego interactuar con la Base de Datos segun las peticiones que reciba. GET para mostrar datos, POST para crear, PUT para modificar y DELETE para eliminar.
+La principal idea de esta aplicacion es recibir las peticiones del FrontEnd a través de una API, para luego interactuar con la Base de Datos según las peticiones que reciba. GET para mostrar datos, POST para crear, PUT para modificar y DELETE para eliminar.
 
-Estas son las dos cuentas con las que puedes ingresar :
+---
 
-**Nombre de Usuario : ** admin
-**Contraseña** : admin
+### **Visuales:**
 
-**Nombre de Usuario** : rodrigouser
-**Contraseña** : rodrigouser
-
-1. Lo primero que debes hacer es registrarte, ya sea como Administrador o como usuario normal. Si se registra como Administrador podrás **modificar**, **eliminar** y **añadir** datos a cada seccion.
-2. Luego ya podrás ver todo el contenido de mi portfolio, se encuentra dividido por algunas secciones **Educación**, **Experiencia Laboral**, **Proyectos** y **Habilidades**.
-3. Cuado ingreses como Adminstrador en cada seccion se habilitará unos botones de **editar** y **añadir**, que al darle click te redirigirá a otra ruta y podras ingresar los nuevos datos en el formulario que se muestre. También habrá un boton rojo para **eliminar** que al darle click se eliminaran esos datos.
-4. Para añadir una imagen debes "Copiar la dirección de enlace" de una imagen de internet, y pegarlo en el campo "IMAGEN URL" del formulario que tenga ese campo.
+- Puedes ver la aplicación web finalizada [Aquí](https://front-portfolioap.web.app/ "Aqui")
+- Puedes visualizar la maqueta web haciendo click [Aquí](https://maquetaportfolio.netlify.app/ "Aquí")
 
 ---
 
 ### **Estado Del Proyecto:**
 
 El proyecto todavía no esta finalizado. La idea es tenerlo listo para antes del 31 de Agosto de 2022.
+Ultima Actualización 20 de Agosto dee 2022.
